@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Cross_Browser]" parallel="tests">
+  <test thread-count="2" name="Testrunner-firefox_Browser(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.crm.comcast_OrganisationPOMTest.Organisation">
+        <methods>
+          <include name="configAM"/>
+          <include name="createOrgWithInd"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="createOrgTest"/>
+          <include name="configBM"/>
+        </methods>
+      </class> <!-- com.crm.comcast_OrganisationPOMTest.Organisation -->
+    </classes>
+  </test> <!-- Testrunner-firefox_Browser(failed) -->
+  <test thread-count="2" name="Testrunner-Chrome_Browser(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.comcast_OrganisationPOMTest.Organisation">
+        <methods>
+          <include name="configAM"/>
+          <include name="createOrgWithInd"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="configBM"/>
+        </methods>
+      </class> <!-- com.crm.comcast_OrganisationPOMTest.Organisation -->
+    </classes>
+  </test> <!-- Testrunner-Chrome_Browser(failed) -->
+</suite> <!-- Failed suite [Cross_Browser] -->

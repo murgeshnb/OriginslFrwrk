@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Distributed_parallel]" parallel="tests">
+  <test thread-count="2" name="TestRunner-1(failed)" parallel="tests">
+    <classes>
+      <class name="com.crm.comcast_OrganisationPOMTest.Organisation">
+        <methods>
+          <include name="configAM"/>
+          <include name="createOrgWithInd"/>
+          <include name="configAS"/>
+          <include name="configAC"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
+          <include name="createOrgTest"/>
+          <include name="configBM"/>
+        </methods>
+      </class> <!-- com.crm.comcast_OrganisationPOMTest.Organisation -->
+    </classes>
+  </test> <!-- TestRunner-1(failed) -->
+</suite> <!-- Failed suite [Distributed_parallel] -->
