@@ -41,7 +41,7 @@ public class ContactTest extends Baseclass {
 		ContactsInformationPage cinfo=new ContactsInformationPage(driver);
 		String header = cinfo.getHeader().getText();
 		boolean msgcont = header.contains(ContactName);
-		Assert.assertTrue(false);
+		Assert.assertTrue(msgcont);
 	}
 	
 	

@@ -10,8 +10,7 @@ public class Retryanalyzerclass implements IRetryAnalyzer{
 		
 		if(counter<retrylimit){
 			counter++;
-			return true;
-			
+			return true;	
 		}
 	return false;
 }
