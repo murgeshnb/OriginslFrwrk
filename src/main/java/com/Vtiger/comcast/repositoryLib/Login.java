@@ -39,5 +39,12 @@ public class Login {	// RULE1
 		passWord.sendKeys(password);
 		loginBtn.click();
 	}
+	
+	public void login(WebDriver driver)
+	{
+		userName.sendKeys("admin");
+		passWord.sendKeys("admin");
+		loginBtn.click();
+	}
 
 }

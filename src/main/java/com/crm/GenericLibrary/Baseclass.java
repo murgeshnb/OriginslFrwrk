@@ -15,11 +15,19 @@ import org.testng.annotations.Parameters;
 
 import com.Vtiger.comcast.repositoryLib.Home;
 import com.Vtiger.comcast.repositoryLib.Login;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Baseclass {
 	
-	public WebDriver driver=null;
+	public WebDriver driver;
+	public static ExtentReports reports;
+	public static ExtentTest test;
+	
 	public static WebDriver sdriver;
+	
 	/*Creating Objects*/
 	public Fileutility fLib=new Fileutility();
 	public Javautility jLib=new Javautility();
@@ -31,6 +39,16 @@ public class Baseclass {
 	public void configBS()
 	{
 		System.out.println("Connecting to database");
+		ExtentSparkReporter sparkroperter=new ExtentSparkReporter("./ExtentReports.html");
+		sparkroperter.config().setTheme(Theme.DARK);
+		sparkroperter.config().setDocumentTitle("V tiger Automation");
+		sparkroperter.config().setReportName("Excecution report of VTIGER");
+		
+		 reports=new ExtentReports();
+		reports.attachReporter(sparkroperter);
+		reports.setSystemInfo("OS", "Win 10");
+		reports.setSystemInfo("url", "https://localhost:8888");
+		reports.setSystemInfo("Reporter", "Murgesh N B");
 	}
 	
 	//@Parameters("browser")
@@ -90,7 +108,7 @@ public class Baseclass {
 	public void configAS()
 	{
 		System.out.println("disConnecting to database");
+		reports.flush();
+		
 	}
-	
-
 }

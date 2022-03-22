@@ -8,12 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Home {		//rule1
 	
-	public Home(WebDriver driver)		//rule3
+	public Home(WebDriver driver)		//rule3 init
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(linkText="Organizations")		//rule2
+	@FindBy(linkText="Organizations")		//rule2 decl
 	private WebElement organisation;
 	
 	@FindBy(linkText="Contacts")
@@ -25,7 +25,7 @@ public class Home {		//rule1
 	@FindBy(linkText="Sign Out")
 	private WebElement Signoutlink;
 	
-	public WebElement getOrganisation() {
+	public WebElement getOrganisation() {	//rule4
 		return organisation;
 	}
 	
@@ -41,12 +41,14 @@ public class Home {		//rule1
 		return Signoutlink;
 	}
 	
-	public void Logout(WebDriver driver)
+	public void Logout(WebDriver driver)		//rule5
 	{
 		Actions act=new Actions(driver);
 		act.moveToElement(administratorImg).perform();
 		Signoutlink.click();
 	}
+	
+	
 
 	
 

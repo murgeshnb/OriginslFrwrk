@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -44,7 +45,7 @@ public class WebDriverutility {
 	 */
 	public void waitUntilPageLoad(WebDriver driver)
 	{
-		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	/**
@@ -85,7 +86,7 @@ public class WebDriverutility {
 	 * @param index
 	 */
 	
-	public void select(WebElement element,int index)
+	public void selectBYINDExx(WebElement element,int index)
 	{
 		Select s=new Select(element);
 		s.selectByIndex(index);
@@ -232,29 +233,18 @@ public class WebDriverutility {
 		Robot r=new Robot();
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
+		driver.get(driver.getCurrentUrl());
+//		r.keyPress(KeyEvent.VK_F5);
+//		r.keyRelease(KeyEvent.VK_F5);
+		
+		Actions act=new Actions(driver);
+//		act.sendKeys(Keys.F5).perform();
+	//	act.sendKeys(Keys.CONTROL+t);
+		//Robot r=new Robot();
+				//r.keyPress(KeyEvent.VK_CONTROL+KeyEvent.VK_T);
+		
+		
+	}	
 
 }
