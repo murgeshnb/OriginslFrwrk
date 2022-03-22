@@ -17,13 +17,17 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ListImpClass implements ITestListener { 
+public class ListImpClass implements ITestListener
+{ 
 	
 	ExtentTest test;
 	   ExtentReports report;
 	
-	public void onTestFailure(ITestResult result) {
+	public void onTestFailure(ITestResult result) 
+	{
+		
 		String mtdname = result.getMethod().getMethodName();
+		
 		EventFiringWebDriver efire=new EventFiringWebDriver(Baseclass.sdriver);
 		File src = efire.getScreenshotAs(OutputType.FILE);
 		
@@ -86,36 +90,6 @@ public class ListImpClass implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		test.log(Status.PASS, result.getMethod().getMethodName()+" is passed");
 		
-	}
-
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
-	}
-
-	@Override
-	public boolean equals(Object arg0) {
-		// TODO Auto-generated method stub
-		return super.equals(arg0);
-	}
-
-	@Override
-	protected void finalize() throws Throwable {
-		// TODO Auto-generated method stub
-		super.finalize();
-	}
-
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
 	}
 
 }
