@@ -1,5 +1,7 @@
 package practice;
 
+import java.awt.List;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,6 +11,8 @@ public class BookTrainticket {
 	public void bookticket(String src, String dstn)
 	{
 		System.out.println("Book ticket from "+src+"=====>to "+dstn);
+		
+		
 	}
 	
 	@DataProvider

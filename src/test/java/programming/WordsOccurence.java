@@ -6,7 +6,7 @@ public class WordsOccurence {
 
 	public static void main(String[] args) 
 	{
-		String s="Welcome to india Welcome to mandya";
+		String s="Welcome to india Welcome to mandya to";
 		String[] spl = s.split(" ");
 		HashSet<String> hs=new HashSet<String>();
 		

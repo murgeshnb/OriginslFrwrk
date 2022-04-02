@@ -18,7 +18,7 @@ public class Fileutility {
 	{
 		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\commondata.properties");
 		Properties po=new Properties();
-		po.load(fis);
+		 po.load(fis);
 		String value = po.getProperty(key);
 		return value;
 	}

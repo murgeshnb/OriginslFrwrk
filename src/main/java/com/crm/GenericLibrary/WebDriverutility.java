@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -55,7 +56,7 @@ public class WebDriverutility {
 	 */
 	public void waitForElementVisibility(WebDriver driver,WebElement element)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,500);
+		WebDriverWait wait=new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
@@ -176,6 +177,7 @@ public class WebDriverutility {
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dest=new File("./screenshot/"+screenshotname+".PNG");
 		Files.copy(src, dest);
+		//FileUtils.copyFile(src, dest);
 	}
 	
 	public void switchToWindow(WebDriver driver,String partialWinTitle)
@@ -234,15 +236,16 @@ public class WebDriverutility {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 		
+		
 		driver.get(driver.getCurrentUrl());
 //		r.keyPress(KeyEvent.VK_F5);
 //		r.keyRelease(KeyEvent.VK_F5);
 		
 		Actions act=new Actions(driver);
 //		act.sendKeys(Keys.F5).perform();
-	//	act.sendKeys(Keys.CONTROL+t);
-		//Robot r=new Robot();
-				//r.keyPress(KeyEvent.VK_CONTROL+KeyEvent.VK_T);
+//		act.sendKeys(Keys.CONTROL+t);
+//		Robot r=new Robot();
+//		r.keyPress(KeyEvent.VK_CONTROL+KeyEvent.VK_T);
 		
 		
 	}	
