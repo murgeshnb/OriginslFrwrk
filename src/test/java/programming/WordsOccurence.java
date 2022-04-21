@@ -8,6 +8,7 @@ public class WordsOccurence {
 	{
 		String s="Welcome to india Welcome to mandya to";
 		String[] spl = s.split(" ");
+		
 		HashSet<String> hs=new HashSet<String>();
 		
 		for(int i=0;i<spl.length;i++)
@@ -25,8 +26,8 @@ public class WordsOccurence {
 					count++;	
 				}
 			}
-			
 			System.out.println(word+" "+count);
+			
 		}
 
 	}

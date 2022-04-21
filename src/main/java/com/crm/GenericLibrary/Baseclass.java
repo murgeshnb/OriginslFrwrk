@@ -53,7 +53,7 @@ public class Baseclass {
 		reports.setSystemInfo("Reporter", "Murgesh N B");
 	}
 
-	//@Parameters("browser")
+	//@Parameters("browser")  //crsbrwsr
 	@BeforeClass(groups={"smoke","regression"})
 	public void configBC(/*String BROWSER*/) throws IOException
 	{

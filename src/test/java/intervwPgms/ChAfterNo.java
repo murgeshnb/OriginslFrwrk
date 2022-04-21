@@ -6,7 +6,7 @@ public class ChAfterNo
 {
 	@Test
 	public void charNo(){
-		String s="aaabbcca";
+		String s="aaabbddcca";
 		int count=1;
 		for (int i = 0; i < s.length(); i++) {
 			try{

@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -28,7 +29,7 @@ public class BrokenLinks {
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		for (WebElement eles : links) {
-		String url =eles.getAttribute("href");
+		String url =eles.getAttribute("href ");
 		
 		HttpURLConnection urlconn = (HttpURLConnection)new URL(url).openConnection();
 		urlconn.connect();
@@ -41,6 +42,7 @@ public class BrokenLinks {
 		}
 		}
 		driver.close();
+		
 		
 		
 		//fluent wait, pageloadtimeout, setscript timeout

@@ -23,7 +23,7 @@ public class FlipSearch {
 		driver.findElement(By.xpath("//button[.='✕']")).click();
 		driver.findElement(By.xpath("//input[@class='_3704LK']")).sendKeys("mobiles");
 		Thread.sleep(2000);
-		List<WebElement> suggs = driver.findElements(By.xpath("//li[@class='Y5N33s']"));
+		List<WebElement> suggs = driver.findElements(By.xpath("888"));
 		
 		for (WebElement ele : suggs) {
 			System.out.println(ele.getText());
@@ -33,6 +33,7 @@ public class FlipSearch {
 				ele.click();
 			}
 		}
+		
 	}
 
 }

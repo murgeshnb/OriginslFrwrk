@@ -186,6 +186,7 @@ public class WebDriverutility {
 		Iterator<String> itr=whandles.iterator();
 		while(itr.hasNext())
 		{
+			
 			 String winId = itr.next();
 			 String title = driver.switchTo().window(winId).getTitle();
 			 

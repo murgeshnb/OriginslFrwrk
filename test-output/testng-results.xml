@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="246" started-at="2022-04-02T03:48:07Z" finished-at="2022-04-02T03:48:07Z">
+  <suite name="Default suite" duration-ms="339" started-at="2022-04-19T03:18:44Z" finished-at="2022-04-19T03:18:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="246" started-at="2022-04-02T03:48:07Z" finished-at="2022-04-02T03:48:07Z">
-      <class name="intervwPgms.Practice">
-        <test-method status="PASS" signature="prac()[pri:0, instance:intervwPgms.Practice@12d4bf7e]" name="prac" duration-ms="92" started-at="2022-04-02T03:48:07Z" finished-at="2022-04-02T03:48:07Z">
+    <test name="Default test" duration-ms="339" started-at="2022-04-19T03:18:44Z" finished-at="2022-04-19T03:18:45Z">
+      <class name="programPractice2.YesNo">
+        <test-method status="PASS" signature="yess()[pri:0, instance:programPractice2.YesNo@5cee5251]" name="yess" duration-ms="126" started-at="2022-04-19T03:18:45Z" finished-at="2022-04-19T03:18:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- prac -->
-      </class> <!-- intervwPgms.Practice -->
+        </test-method> <!-- yess -->
+      </class> <!-- programPractice2.YesNo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

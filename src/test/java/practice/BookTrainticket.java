@@ -11,8 +11,6 @@ public class BookTrainticket {
 	public void bookticket(String src, String dstn)
 	{
 		System.out.println("Book ticket from "+src+"=====>to "+dstn);
-		
-		
 	}
 	
 	@DataProvider
