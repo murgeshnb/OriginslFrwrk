@@ -40,6 +40,18 @@ public class Login {	// RULE1
 		loginBtn.click();
 	}
 	
+	public void setUserName(WebElement userName) {
+		this.userName = userName;
+	}
+
+	public void setPassWord(WebElement passWord) {
+		this.passWord = passWord;
+	}
+
+	public void setLoginBtn(WebElement loginBtn) {
+		this.loginBtn = loginBtn;
+	}
+
 	public void login(WebDriver driver)
 	{
 		userName.sendKeys("admin");

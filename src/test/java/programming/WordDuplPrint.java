@@ -12,6 +12,7 @@ public class WordDuplPrint {
 		for(int i=0;i<spl.length;i++)
 		{
 			hs.add(spl[i]);
+			
 		}
 		
 		for (String word : hs)

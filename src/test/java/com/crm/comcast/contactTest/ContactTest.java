@@ -27,7 +27,7 @@ public class ContactTest extends Baseclass {
 		/*Extent report config */
 		 test = reports.createTest("Creating contact").assignAuthor("Murgesh NB");
 		 test.log(Status.INFO, "Click on Contact and create contact");
-		
+		 
 		/*Read data from Excel*/
 		String ContactName = eLib.getDatafromExcel("contact", 1, 2)+jLib.getRandomNumber();
 		

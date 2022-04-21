@@ -9,6 +9,7 @@ public class ReverseWords {
 		{
 			System.out.print(spl[i]+" ");
 		}
+		
 	}
 
 }

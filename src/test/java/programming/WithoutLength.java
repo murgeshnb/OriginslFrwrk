@@ -3,7 +3,7 @@ package programming;
 public class WithoutLength {
 
 	public static void main(String[] args) {
-		String s="RoyaLBengaluru";
+		String s="i love RoyaLBengaluru";
 		char[] ch = s.toCharArray();
 		int count=0;
 		
